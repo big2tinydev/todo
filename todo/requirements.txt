@@ -1,0 +1,16 @@
+keyring<=20.0.1
+django_import_export<=2.0.1
+django_icons<=1.1.2
+django_widget_tweaks<=1.4.8
+numpy<=1.18.1
+Django<=3.0.6
+brotli<=1.0.7
+cryptography<=2.9.2
+Cython<=0.29.17
+ipaddr<=2.2.0
+lxml<=4.5.0
+ordereddict<=1.1
+protobuf<=3.12.0
+pyOpenSSL<=19.1.0
+wincertstore<=0.2
+Pillow<=7.1.2
