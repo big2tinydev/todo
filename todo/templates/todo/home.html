@@ -1,13 +1,39 @@
 {% extends 'todo/base.html' %}
 {% load static %}
+{% load icons %}
 
 {% block content %}
-<head><title>todo</title></head>
-<div class="container-fluid mt-3">
-	<h2 class='text-center'>Todo App</h2>
-	{% include "todo/components/now.html" %}
-</div>
-<div class="container-fluid">
+	<head><title>todo</title></head>
+	<div class="container-fluid mt-3">
+		<h1 class="text-center">Todo's ({{ count_all }})</h1>
+		<br>
+		<div class="not_completed text-center">
+			Not Completed ({{ not_complete }})
+		</div>
+		<div class="container">
+			<ul>
+				{% for task in tasks %}
+					{% if not task.completed %}
+						<li class="task">{{ task.task }}</li>
+						<span><a class="done btn btn-primary">Done</a></span>
+						<span><a class="edit btn btn-success">Edit</a></span>
+						<span><a class="delete btn btn-danger">Delete</a></span>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="completed text-center">
+			Completed ({{ complete }})
+		</div>
 
-</div>
+		<div class="container">
+			<ul>
+				{% for task in tasks %}
+					{% if task.completed %}
+						<li class="task">{{ task.task }}</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
 {% endblock content %}

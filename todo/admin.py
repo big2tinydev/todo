@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Image, Todo, Project
+from .models import Image, Todo
 # from import_export.admin import ImportExportModelAdmin
 
 
@@ -12,6 +12,5 @@ from .models import Image, Todo, Project
 # admin.site.register(todo, todoAdmin)
 admin.site.register(Image)
 admin.site.register(Todo)
-admin.site.register(Project)
 
 
